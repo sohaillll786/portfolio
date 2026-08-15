@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Sohail — Video Editor &amp; Web Developer</title>
+<meta name="description" content="Mohammed Sohail is a video editor and web developer crafting cinematic edits and modern, interactive websites.">
+<meta name="theme-color" content="#0a0312">
+
+<meta property="og:title" content="Mohammed Sohail — Video Editor & Web Developer">
+<meta property="og:description" content="Video editing and web development portfolio of Mohammed Sohail.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/poster.jpg">
+
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =========================================
+     LOADING SCREEN
+========================================= -->
+<div class="loader" id="loader" role="status" aria-live="polite" aria-label="Loading site">
+  <div class="loader-bg"></div>
+  <div class="loader-card glass">
+    <div class="loader-orb">
+      <svg viewBox="0 0 64 64" width="46" height="46" aria-hidden="true">
+        <path d="M20 14 L44 14 L24 30 L44 30 L20 50" fill="none" stroke="url(#loaderGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <img src="assets/logowhite.png" alt="Mohammed Sohail Logo">
+      </svg>
+    </div>
+    <p class="loader-name">MOHAMMED SOHAIL</p>
+    <p class="loader-status">INITIALIZING EXPERIENCE</p>
+    <div class="loader-bar"><span class="loader-bar-fill" id="loaderFill"></span></div>
+  </div>
+</div>
+
+<!-- =========================================
+     BACKGROUND VIDEO + ATMOSPHERE LAYERS
+========================================= -->
+<div class="bg-wrap" aria-hidden="true">
+  <video class="background-video" id="bgVideo" autoplay muted loop playsinline preload="auto" poster="assets/poster.jpg">
+    <source src="assets/background.webm" type="video/webm">
+    <source src="assets/background.mp4" type="video/mp4">
+  </video>
+  <div class="bg-overlay bg-overlay--dark"></div>
+  <div class="bg-overlay bg-overlay--violet"></div>
+  <div class="bg-overlay bg-overlay--radial"></div>
+  <div class="bg-overlay bg-overlay--vignette"></div>
+  <div class="bg-overlay bg-overlay--grain"></div>
+</div>
+
+<!-- custom cursor -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+<header class="site-header">
+  <nav class="glass-nav" aria-label="Primary">
+    <a href="#home" class="nav-logo" aria-label="Mohammed Sohail — Home">
+      <!-- =========================================
+           LOGO PLACEHOLDER
+           Replace this SVG/text with your final logo.
+      ========================================= -->
+      <span class="logo-mark"><img src="assets/logowhite.png" alt="Mohammed Sohail Logo"></span>
+      <span class="nav-logo-text">Mohammed Sohail</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+      <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#works" class="nav-link" data-section="works">My Works</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu glass" id="mobileMenu" aria-hidden="true">
+    <ul class="mobile-links">
+      <li><a href="#home" class="mobile-link" data-section="home">Home</a></li>
+      <li><a href="#services" class="mobile-link" data-section="services">Services</a></li>
+      <li><a href="#about" class="mobile-link" data-section="about">About</a></li>
+      <li><a href="#works" class="mobile-link" data-section="works">My Works</a></li>
+      <li><a href="#contact" class="mobile-link" data-section="contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- =========================================
+       HOME / HERO
+  ========================================= -->
+  <section class="hero" id="home">
+    <div class="hero-inner reveal">
+      <p class="eyebrow">Video Editor <span class="dot">•</span> Web Developer</p>
+      <h1 class="hero-title">
+        <span class="hero-line">Cinematic edits.</span>
+        <span class="hero-line hero-line--shimmer">Crafted interfaces.</span>
+      </h1>
+      <p class="hero-sub">I build moving images and interactive websites that feel deliberate, from first cut to final pixel.</p>
+      <div class="hero-actions">
+        <a href="#works" class="btn btn-primary" data-ripple>View My Works</a>
+        <a href="#contact" class="btn btn-secondary" data-ripple>Contact Me</a>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- =========================================
+       SERVICES
+  ========================================= -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <p class="eyebrow reveal">What I Do</p>
+      <h2 class="section-title reveal">Services</h2>
+
+      <div class="service-grid">
+        <article class="service-card glass-card pointer-glow reveal" tabindex="0">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="34" height="34"><path d="M6 12h28a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M38 20l6-4v16l-6-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M17 18l10 6-10 6Z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="service-title">Video Editing</h3>
+          <p class="service-tool">DaVinci Resolve</p>
+          <p class="service-desc">cinematic edits, color grading, short-form and social content, transitions and pacing.</p>
+          <ul class="chip-list">
+            <li class="glass-chip">Color Grading</li>
+            <li class="glass-chip">Storytelling</li>
+            <li class="glass-chip">Short-Form</li>
+            <li class="glass-chip">Transitions</li>
+          </ul>
+        </article>
+
+        <article class="service-card glass-card pointer-glow reveal" tabindex="0">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="34" height="34"><rect x="5" y="9" width="38" height="26" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 40h14M24 35v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M13 20l-4 4 4 4M35 20l4 4-4 4M27 17l-6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-tool">HTML • CSS • JavaScript</p>
+          <p class="service-desc">responsive, accessible, high-performance websites with modern interactive design.</p>
+          <ul class="chip-list">
+            <li class="glass-chip">Responsive UI</li>
+            <li class="glass-chip">Interactive</li>
+            <li class="glass-chip">Accessible</li>
+            <li class="glass-chip">Performance</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       ABOUT
+  ========================================= -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <p class="eyebrow reveal">Behind The Work</p>
+      <h2 class="section-title reveal">About</h2>
+
+      <div class="about-grid">
+        <article class="about-card glass-card reveal">
+          <h3>Introduction</h3>
+          <p>Hi, I’m Sohail — a CSE student and aspiring Web Developer & Video Editor. I build websites with HTML, CSS & JavaScript and create visual content using DaVinci Resolve, combining technical skills with creativity to bring ideas to life.</p>
+        </article>
+        <article class="about-card glass-card reveal">
+          <h3>My Strengths</h3>
+          <p>I bring creativity, attention to detail, and a problem-solving mindset to my work. I enjoy learning new skills, experimenting with ideas, and continuously improving to create better websites and engaging visual content.</p>
+        </article>
+        <article class="about-card glass-card reveal">
+          <h3>Creative Approach</h3>
+          <p>I focus on turning ideas into engaging visual experiences through video editing, storytelling, and thoughtful design. I enjoy experimenting with visuals, motion, and timing to make content feel clear, modern, and impactful.</p>
+        </article>
+        <article class="about-card glass-card reveal">
+          <h3>Development Approach</h3>
+          <p>I build clean, responsive, and user-friendly websites using HTML, CSS, and JavaScript. I focus on writing simple, structured code while continuously learning and improving my development skills.</p>
+        </article>
+      </div>
+
+      <div class="tools-panel glass-card reveal">
+        <h3>Tools &amp; Skills</h3>
+        <ul class="chip-list chip-list--tools">
+          <li class="glass-chip">DaVinci Resolve</li>
+          <li class="glass-chip">HTML5</li>
+          <li class="glass-chip">CSS3</li>
+          <li class="glass-chip">JavaScript</li>
+          <li class="glass-chip">C language</li>
+          <li class="glass-chip">Python</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       MY WORKS
+  ========================================= -->
+  <section class="works" id="works">
+    <div class="section-inner">
+      <p class="eyebrow reveal">Selected Work</p>
+      <h2 class="section-title reveal">My Works</h2>
+
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter-btn" data-filter="video" aria-pressed="false">Video Editing</button>
+        <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web Development</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+
+        <article class="project-card glass-card pointer-glow reveal" data-category="video">
+          <div class="project-media"><img src="assets/Screenshot 2026-08-15 124707.png" alt=""></div>
+          <div class="project-body">
+            <span class="project-tag">Video Editing</span>
+            <h3 class="project-title">Mountains/Ruins edit</h3>
+            <p class="project-desc">A simple cut videos of travel Enthusiast</p>
+            <p class="project-meta">Davinci Resolve · 2026</p>
+            <a href="assets/Vproject1.mp4" class="project-link">View Project →</a>
+          </div>
+        </article>
+
+        <!--<article class="project-card glass-card pointer-glow reveal" data-category="web">
+          <div class="project-media">[MEDIA PLACEHOLDER]</div>
+          <div class="project-body">
+            <span class="project-tag">Web Development</span>
+            <h3 class="project-title">[PROJECT TITLE]</h3>
+            <p class="project-desc">[PROJECT DESCRIPTION]</p>
+            <p class="project-meta">[YOUR TOOLS] · [YEAR]</p>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </article>-->
+
+        <article class="project-card glass-card pointer-glow reveal" data-category="video">
+          <div class="project-media"><img src="assets/Screenshot 2026-08-15 124753.png" alt=""></div>
+          <div class="project-body">
+            <span class="project-tag">Video Editing</span>
+            <h3 class="project-title">Independence Day</h3>
+            <p class="project-desc">A look back to the struggle to make India free</p>
+            <p class="project-meta">Davinci Resolve · 2026</p>
+            <a href="assets/Vproject2.mp4" class="project-link">View Project →</a>
+          </div>
+        </article>
+
+       <!-- <article class="project-card glass-card pointer-glow reveal" data-category="web">
+          <div class="project-media">[MEDIA PLACEHOLDER]</div>
+          <div class="project-body">
+            <span class="project-tag">Web Development</span>
+            <h3 class="project-title">[PROJECT TITLE]</h3>
+            <p class="project-desc">[PROJECT DESCRIPTION]</p>
+            <p class="project-meta">[YOUR TOOLS] · [YEAR]</p>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </article>
+
+        <article class="project-card glass-card pointer-glow reveal" data-category="video">
+          <div class="project-media">[MEDIA PLACEHOLDER]</div>
+          <div class="project-body">
+            <span class="project-tag">Video Editing</span>
+            <h3 class="project-title">[PROJECT TITLE]</h3>
+            <p class="project-desc">[PROJECT DESCRIPTION]</p>
+            <p class="project-meta">[YOUR TOOLS] · [YEAR]</p>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </article>
+
+        <article class="project-card glass-card pointer-glow reveal" data-category="web">
+          <div class="project-media">[MEDIA PLACEHOLDER]</div>
+          <div class="project-body">
+            <span class="project-tag">Web Development</span>
+            <h3 class="project-title">[PROJECT TITLE]</h3>
+            <p class="project-desc">[PROJECT DESCRIPTION]</p>
+            <p class="project-meta">[YOUR TOOLS] · [YEAR]</p>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </article>-->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       CONTACT
+  ========================================= -->
+  <section class="contact" id="contact">
+    <div class="section-inner section-inner--narrow">
+      <div class="contact-card glass-card reveal">
+        <div class="contact-logo">
+          <span class="logo-mark logo-mark--lg"><img src="assets/logowhite.png" alt="Mohammed Sohail Logo"></span>
+        </div>
+        <h2 class="contact-title">Let's Create Something</h2>
+        <p class="contact-sub">Have a project in mind? Tell me a little about it and I'll get back to you.</p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <!-- honeypot -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="botcheck" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input class="glass-input" type="text" id="name" name="name" required autocomplete="name">
+            <span class="field-error" id="nameError" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input class="glass-input" type="email" id="email" name="email" required autocomplete="email">
+            <span class="field-error" id="emailError" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="projectType">Project Type</label>
+            <select class="glass-input glass-select" id="projectType" name="project_type" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Both">Both</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="field-error" id="projectTypeError" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea class="glass-input" id="message" name="message" rows="5" required></textarea>
+            <span class="field-error" id="messageError" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit" id="submitBtn" data-ripple>
+            <span class="btn-label">Send Message</span>
+          </button>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="contact-alt">Prefer email? <a href="mailto:YOUR_EMAIL">mohdsohail0713@gmail.com</a></p>
+
+        <div class="social-row">
+          <a class="social-link" href="https://instagram.com/mohammed.sohaillll" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg>
+          </a>
+          <a class="social-link" href="https://linkedin.com/in/mohammed-sohail-ahmed-ansari" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8" cy="8.5" r="1.2" fill="currentColor"/><path d="M6.8 11v6.2M11 11v6.2M11 13.6c0-1.6 1.2-2.6 2.6-2.6 1.5 0 2.4 1 2.4 2.8v3.4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+          </a>
+          <a class="social-link" href="https://github.com/sohaillll786" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
+          </a>
+          <a class="social-link" href="https://x.com/mohdsohailll" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark"><img src="assets/logowhite.png" alt=""></span>
+      <div>
+        <p class="footer-name">Mohammed Sohail</p>
+        <p class="footer-role">Video Editor • Web Developer</p>
+      </div>
+    </div>
+
+    <div class="social-row">
+      <a class="social-link" href="https://instagram.com/mohammed.sohaillll" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg>
+      </a>
+      <a class="social-link" href="https://linkedin.com/in/mohammed-sohail-ahmed-ansari" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8" cy="8.5" r="1.2" fill="currentColor"/><path d="M6.8 11v6.2M11 11v6.2M11 13.6c0-1.6 1.2-2.6 2.6-2.6 1.5 0 2.4 1 2.4 2.8v3.4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+      </a>
+      <a class="social-link" href="https://github.com/sohaillll786" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
+      </a>
+      <a class="social-link" href="https://x.com/mohdsohailll" target="_blank" rel="noopener noreferrer" aria-label="X">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="footer-copy">© <span id="year"></span> Mohammed Sohail. All rights reserved.</p>
+</footer>
+
+<!-- back to top -->
+<button class="back-to-top glass" id="backToTop" aria-label="Back to top" hidden>
+  <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 const CONTACT_CONFIG = {
   endpoint: "https://api.web3forms.com/submit",
   // Replace YOUR_WEB3FORMS_ACCESS_KEY with your Web3Forms access key.
-  accessKey: "YOUR_WEB3FORMS_ACCESS_KEY"
+  accessKey: "54705278-aebe-4c42-979c-90b26578e104"
 };
 
 const SOCIAL_LINKS = {
